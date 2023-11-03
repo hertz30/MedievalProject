@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{458902d0-8efc-4f5e-8551-ecee669f0f23}">
+		<property name="assetPath">
+			<value>BattleMusic_Strings1_130bpm4-4_L8M_P0.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.02</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de3cdb29-9276-4d7f-82eb-be54b50498bd}</destination>
+		</relationship>
+	</object>
+</objects>

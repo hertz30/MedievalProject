@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4ac250dc-3476-4d7f-abb4-6d1116a286bb}">
+		<property name="assetPath">
+			<value>BattleMusic_Glass3_130bpm4-4_L8M_P0.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>19.116</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de3cdb29-9276-4d7f-82eb-be54b50498bd}</destination>
+		</relationship>
+	</object>
+</objects>

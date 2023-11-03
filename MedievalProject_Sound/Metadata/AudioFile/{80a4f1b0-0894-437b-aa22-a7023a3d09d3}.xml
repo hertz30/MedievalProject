@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{80a4f1b0-0894-437b-aa22-a7023a3d09d3}">
+		<property name="assetPath">
+			<value>BattleMusic_Shaker_130bpm4-4_L8M_P0.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.702666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de3cdb29-9276-4d7f-82eb-be54b50498bd}</destination>
+		</relationship>
+	</object>
+</objects>
