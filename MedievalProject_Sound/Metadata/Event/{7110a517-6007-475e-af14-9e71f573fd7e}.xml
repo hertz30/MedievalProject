@@ -212,9 +212,6 @@
 		<property name="length">
 			<value>14.76923076923077</value>
 		</property>
-		<property name="playlistMode">
-			<value>1</value>
-		</property>
 		<relationship name="sounds">
 			<destination>{1ec9583d-0468-401a-bc64-cb7e70d48172}</destination>
 			<destination>{4fcba315-e089-4802-94d2-5e42a27fa081}</destination>
@@ -367,7 +364,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{20dfc511-50ec-42df-be09-11da77f58f91}" />
 	<object class="SingleSound" id="{1ec9583d-0468-401a-bc64-cb7e70d48172}">
-		<property name="name" />
 		<relationship name="audioFile">
 			<destination>{1926f36f-0d4b-45ab-9150-1b5b0628a7bf}</destination>
 		</relationship>
@@ -384,7 +380,7 @@
 	</object>
 	<object class="PlayPercentage" id="{fd6fdf3e-7cdd-4f51-bab9-bff0f9eecba9}">
 		<property name="percentage">
-			<value>30</value>
+			<value>40</value>
 		</property>
 		<relationship name="sound">
 			<destination>{4fcba315-e089-4802-94d2-5e42a27fa081}</destination>
@@ -392,7 +388,7 @@
 	</object>
 	<object class="PlayPercentage" id="{a08cd6a1-b67d-48be-bbe8-51bafae2512a}">
 		<property name="percentage">
-			<value>50</value>
+			<value>30</value>
 		</property>
 		<relationship name="sound">
 			<destination>{1ec9583d-0468-401a-bc64-cb7e70d48172}</destination>
