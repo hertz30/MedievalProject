@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,15 @@ public class Enemy : MonoBehaviour
     public float lookRadius = 10f;
     Transform target;
     NavMeshAgent agent;
+    private Animator anim;
+    public string Idle;
+    public GameObject myPrefab;
     // Start is called before the first frame update
     void Start(){
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
-        
+        (Instantiate (myPrefab, this.transform.position, this.transform.rotation) as GameObject).transform.parent = this.transform;
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,7 +30,18 @@ public class Enemy : MonoBehaviour
             if(distance <= agent.stoppingDistance){
                 //face the target
                 FaceTarget();
+                
+            // currently broken 
+            // if(distance <= 1f){
+            //     anim.Play("Movement.Melee_TwoHanded");
+            // }else{
+            //     anim.Play("Movement.Run");
+            // }
+
+            anim.Play("Movement.Run");
             }
+        }else{
+            anim.Play("Idles."+Idle);
         }
     }
     void FaceTarget(){

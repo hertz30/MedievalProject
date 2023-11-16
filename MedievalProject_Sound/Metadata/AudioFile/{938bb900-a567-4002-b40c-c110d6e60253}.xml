@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{938bb900-a567-4002-b40c-c110d6e60253}">
+		<property name="assetPath">
+			<value>monster-grunts-174559.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>87.980408163265309</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de3cdb29-9276-4d7f-82eb-be54b50498bd}</destination>
+		</relationship>
+	</object>
+</objects>
