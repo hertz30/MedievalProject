@@ -123,11 +123,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25406382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6547208107568434638, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+  m_PrefabInstance: {fileID: 4939734834697359022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &25406383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9059994626526811963, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
   m_PrefabInstance: {fileID: 4939734834697359022}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &25406384
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25406382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &28734620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ed1b3d70a6d78984db7c7c9293c32acc, type: 3}
@@ -7298,7 +7325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989803703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -7339,7 +7366,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -8062,23 +8089,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860576262151669077, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1860576262151669077, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2782783965264956272, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3934917028688164498, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3934917028688164498, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4074734969736470023, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 4074734969736470023, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4074734969736470023, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_ProvidesContacts
@@ -8086,7 +8121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230669507536019168, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4230669507536019168, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_ProvidesContacts
@@ -8096,11 +8131,23 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5790202921047394276, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6547208107568434638, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_Name
       value: Grounds
       objectReference: {fileID: 0}
     - target: {fileID: 6547208107568434638, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712875278757812457, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013891382654895690, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -8151,7 +8198,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6547208107568434638, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 25406384}
   m_SourcePrefab: {fileID: 100100000, guid: e63f3154c239f12448149fa5d5ad71bb, type: 3}
 --- !u!1001 &5037506848669496929
 PrefabInstance:
