@@ -59,18 +59,22 @@ public class PlayerCC : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
 
         // Configure player's animations. ~TW
-        if (goMove != 0) // && onGround
+        if (goMove+goTurn != 0) // && onGround
         {
             if (Input.GetKey(KeyCode.S)) {
-                animate.SetBool("isBackwards", true);
-                animate.SetBool("isRunning", false);
-            } if (Input.GetKey(KeyCode.W)) {
-                animate.SetBool("isRunning", true);
-                animate.SetBool("isBackwards", false);
+                animate.SetInteger("Speed", -1);
+            } 
+            if (Input.GetKey(KeyCode.W)) {
+                animate.SetInteger("Speed", 6);
+            } 
+            if (Input.GetKey(KeyCode.A)) {
+                animate.SetInteger("Speed", 5);
+            } 
+            if (Input.GetKey(KeyCode.D)) {
+                animate.SetInteger("Speed", 5);
             }
         } else {
-            animate.SetBool("isRunning", false);
-            animate.SetBool("isBackwards", false);
+            animate.SetInteger("Speed", 0);
         } 
 
         animate.SetBool("inAir", !onGround);
