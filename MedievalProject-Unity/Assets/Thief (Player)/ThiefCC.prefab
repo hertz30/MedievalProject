@@ -2257,9 +2257,10 @@ GameObject:
   - component: {fileID: 1083720404159931665}
   - component: {fileID: 7788394661489078406}
   - component: {fileID: 5683906664573603103}
+  - component: {fileID: 4941389652663094750}
   m_Layer: 0
   m_Name: ThiefCC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2378,11 +2379,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff471c38693340efbfed2e352834496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rotationSpeed: 200
-  strafeSpeed: 0
+  moveSpeed: 10
+  rotationSpeed: 100
+  strafeSpeed: 5
   jumpHeight: 5
   gravity: 9.81
+--- !u!114 &4941389652663094750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580897836811737717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &4000175158443504034
 GameObject:
   m_ObjectHideFlags: 0
