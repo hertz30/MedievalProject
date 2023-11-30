@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-public class Enemy : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     private float speed;
     private bool isDead;
@@ -18,6 +18,10 @@ public class Enemy : MonoBehaviour
     Transform target;
     public GameObject myPrefab;
     private Slider healthBar;
+    public float attackRate=2f;
+    public float damage = 0.1f;
+    private float nextAttack;
+    private static GameObject player;
     // Start is called before the first frame update
     void Start(){
         target = PlayerManager.instance.player.transform;
@@ -28,12 +32,13 @@ public class Enemy : MonoBehaviour
         anim.SetInteger("Animation_int", UnityEngine.Random.Range(1,9));
         anim.SetInteger("DeathType_int", UnityEngine.Random.Range(1,3));
         healthBar = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Slider>();
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health==0){
+        if(health<=0){
             isDead=true;
             anim.SetBool("Death_b", isDead);
             Invoke("Dead", 1.4f);
@@ -53,9 +58,20 @@ public class Enemy : MonoBehaviour
         }
         anim.SetFloat("Speed_f", speed);
         UpdateHealthbar();
+        if(isAttacking&&Time.time>nextAttack) {
+                isAttacking = false;
+                nextAttack = Time.time + attackRate;
+                player.GetComponent<PlayerCC>().health-=damage;
+                Invoke("resetDamage", attackRate);
+                Debug.Log("attacked");
+            } 
     }
     public void UpdateHealthbar(){
         healthBar.value = health;
+    }
+    public void resetDamage(){
+        isAttacking=true;
+        Debug.Log("attacking again");
     }
     void Dead(){
         anim.speed=0;
