@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,9 @@ public class PlayerCC : MonoBehaviour
     bool isDead;
     Slider healthBar;
 
+    [Range(0.1f, 2.0f)] // slider range
+    public static float sensOffset = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +60,7 @@ public class PlayerCC : MonoBehaviour
         moveInput = new Vector2(goTurn, goMove);
 
         // Get mouse input for turning
-        mouseInput = Mouse.current.delta.ReadValue();
+        mouseInput = Mouse.current.delta.ReadValue() * sensOffset;
 
         // Rotate the player based on mouse input
         Vector3 playerRotation = Vector3.up * mouseInput.x * rotationSpeed * Time.deltaTime;
