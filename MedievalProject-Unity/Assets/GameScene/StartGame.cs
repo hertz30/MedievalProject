@@ -34,7 +34,6 @@ public class StartGame : MonoBehaviour
         aboutPage.SetActive(false);
         settingsPage.SetActive(true);
     }
-
     public void BackToMain() // switch to main ~TW
     {
         titleScreen.SetActive(true);

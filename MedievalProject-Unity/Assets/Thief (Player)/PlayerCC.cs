@@ -30,7 +30,7 @@ public class PlayerCC : MonoBehaviour
     Slider healthBar;
 
     [Range(0.1f, 2.0f)] // slider range
-    public static float sensOffset = 1f;
+    public float sensOffset = 1f;
 
     // Start is called before the first frame update
     void Start()
