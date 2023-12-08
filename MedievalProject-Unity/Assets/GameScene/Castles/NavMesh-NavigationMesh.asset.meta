@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:MedievalProject-Unity/Assets/GameScene/Start/NavMesh-NavigationMesh.asset.meta
+guid: 4f95608eccb447a4584026c9944f6852
+========
+guid: 3b836a4ec6b4ef44a9263a29ddada436
+>>>>>>>> WorldBuildingJB:MedievalProject-Unity/Assets/GameScene/Castles/NavMesh-NavigationMesh.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
