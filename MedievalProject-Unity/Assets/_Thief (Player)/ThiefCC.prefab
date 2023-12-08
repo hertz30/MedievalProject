@@ -2751,7 +2751,7 @@ MonoBehaviour:
   gravity: 9.81
   health: 1
   weapon: {fileID: 6086657772835769891}
-  sensOffset: 1
+  sensOffset: 0.2
 --- !u!114 &4941389652663094750
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1122,10 +1122,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThiefCC
       objectReference: {fileID: 0}
-    - target: {fileID: 5683906664573603103, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
-      propertyPath: sensOffset
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6250029784349863174, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
