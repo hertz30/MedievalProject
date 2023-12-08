@@ -41,7 +41,7 @@ public class PlayerCC : MonoBehaviour
         weaponCollider = weapon.GetComponent<Collider>();
         healthBar = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Slider>();
         sensOffset=PlayerPrefs.GetFloat("MouseSens",0.3f)*2;
-        FMODUnity.RuntimeManager.GetBus("bus:/").setVolume(PlayerPrefs.GetInt("Volume"));
+        FMODUnity.RuntimeManager.GetBus("bus:/").setVolume(PlayerPrefs.GetFloat("Volume", 0.75f));
     }
 
     // Update is called once per frame
