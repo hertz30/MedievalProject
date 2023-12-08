@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: myPrefab
       value: 
       objectReference: {fileID: 175986, guid: cdc26bac7dd09f24082080f45f2cd4ba, type: 3}
+    - target: {fileID: 1450427949961529102, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: myPrefab
+      value: 
+      objectReference: {fileID: 175986, guid: cdc26bac7dd09f24082080f45f2cd4ba, type: 3}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -18.069668
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6058247872153913634, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -55,6 +59,34 @@ PrefabInstance:
     - target: {fileID: 6549918442214081205, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
       propertyPath: m_Name
       value: EnemyGeneric Variant 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: PlayEvent
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: StopEvent
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/SkeletonSounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 1564847036
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1178145027
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1356347780
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126745173261169534, guid: 3d7af12640b077b498cae884ec3ab218, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 562147383
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
