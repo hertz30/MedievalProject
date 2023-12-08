@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6986081443741050813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GoblinSounds
+  m_EditorClassIdentifier: 
+  Path: event:/GoblinSounds
+  Guid:
+    Data1: -1231181084
+    Data2: 1181704864
+    Data3: -1361108590
+    Data4: 579126488
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 87980
 --- !u!114 &-5984945622166711403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,65 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638352527296783597
+  lastModified: 638375844124358434
   FileSizes:
   - Name: Desktop
-    Value: 754
+    Value: 936
   Exists: 1
+--- !u!114 &-3024323421747183843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ElfSounds
+  m_EditorClassIdentifier: 
+  Path: event:/ElfSounds
+  Guid:
+    Data1: 93645889
+    Data2: 1147829313
+    Data3: -1466955627
+    Data4: 1696731395
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31320
+--- !u!114 &-428175270639810705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HumanSounds
+  m_EditorClassIdentifier: 
+  Path: event:/HumanSounds
+  Guid:
+    Data1: 1192942354
+    Data2: 1265395172
+    Data3: -735425139
+    Data4: 805168244
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9288
 --- !u!114 &-97149641316529842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +116,10 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638352527296773577
+  lastModified: 638375844124358434
   FileSizes:
   - Name: Desktop
-    Value: 3043232
+    Value: 4342592
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -57,12 +138,16 @@ MonoBehaviour:
   - {fileID: -97149641316529842}
   EditorEvents:
   - {fileID: 4037201723282630612}
+  - {fileID: -428175270639810705}
+  - {fileID: -3024323421747183843}
+  - {fileID: 7382391326019371908}
+  - {fileID: -6986081443741050813}
   EditorParameters: []
   MasterBanks:
   - {fileID: -97149641316529842}
   StringsBanks:
   - {fileID: -5984945622166711403}
-  cacheTime: 638352527296783597
+  cacheTime: 638375844124358434
   cacheVersion: 131608
 --- !u!114 &4037201723282630612
 MonoBehaviour:
@@ -91,3 +176,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14769
+--- !u!114 &7382391326019371908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SkeletonSounds
+  m_EditorClassIdentifier: 
+  Path: event:/SkeletonSounds
+  Guid:
+    Data1: 1564847036
+    Data2: 1178145027
+    Data3: 1356347780
+    Data4: 562147383
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9816
