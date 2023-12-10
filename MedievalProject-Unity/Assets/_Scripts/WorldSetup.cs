@@ -1,34 +1,32 @@
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
-using UnityEngine.AI;
 
 public class WorldSetup : MonoBehaviour
 {
-#if UNITY_EDITOR
-    [ContextMenu("Remove NavMeshObstacle Recursively")]
-    void RemoveNavMeshObstacleContext()
+    [ContextMenu("Create World Boundary")]
+    void CreateWorldBoundary()
     {
-        RemoveNavMeshObstacleRecursive(transform);
+        float mapSize = 800f;
+        float boundaryThickness = 1f; // Adjust as needed
+        int barrierHeight = 100; // Adjust the height
+
+        // Create top boundary
+        CreateBoxCollider(new Vector3(0f, boundaryThickness / 2f, mapSize / 2f), new Vector3(mapSize, boundaryThickness, barrierHeight));
+
+        // Create bottom boundary
+        CreateBoxCollider(new Vector3(0f, boundaryThickness / 2f, -mapSize / 2f), new Vector3(mapSize, boundaryThickness, barrierHeight));
+
+        // Create left boundary
+        CreateBoxCollider(new Vector3(-mapSize / 2f, boundaryThickness / 2f, 0f), new Vector3(boundaryThickness, barrierHeight, mapSize));
+
+        // Create right boundary
+        CreateBoxCollider(new Vector3(mapSize / 2f, boundaryThickness / 2f, 0f), new Vector3(boundaryThickness, barrierHeight, mapSize));
     }
-#endif
 
-    void RemoveNavMeshObstacleRecursive(Transform parent)
+    void CreateBoxCollider(Vector3 position, Vector3 size)
     {
-        foreach (Transform child in parent)
-        {
-            // Remove or disable the NavMeshObstacle component
-            NavMeshObstacle navMeshObstacle = child.GetComponent<NavMeshObstacle>();
-            if (navMeshObstacle != null)
-            {
-                // You can either remove the NavMeshObstacle component
-                DestroyImmediate(navMeshObstacle);
-                // OR disable it if you might want to enable it later
-                // navMeshObstacle.enabled = false;
-            }
-
-            RemoveNavMeshObstacleRecursive(child);
-        }
+        GameObject boundary = new GameObject("Boundary");
+        boundary.transform.position = position;
+        BoxCollider boxCollider = boundary.AddComponent<BoxCollider>();
+        boxCollider.size = size;
     }
 }
