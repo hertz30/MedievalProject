@@ -1,30 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WorldSetup : MonoBehaviour
 {
-    void Start()
+#if UNITY_EDITOR
+    [ContextMenu("Remove NavMeshObstacle Recursively")]
+    void RemoveNavMeshObstacleContext()
     {
-        // Recursively set tag to "ground" and add MeshColliders to all child objects
-        SetTagAndAddMeshCollidersRecursivelyToChildren(transform);
+        RemoveNavMeshObstacleRecursive(transform);
     }
+#endif
 
-    void SetTagAndAddMeshCollidersRecursivelyToChildren(Transform parent)
+    void RemoveNavMeshObstacleRecursive(Transform parent)
     {
-        // Set tag to "ground" for the current object if it has a MeshFilter component
-        MeshFilter meshFilter = parent.GetComponent<MeshFilter>();
-        if (meshFilter != null)
-        {
-            parent.gameObject.tag = "Ground";
-            MeshCollider meshCollider = parent.gameObject.AddComponent<MeshCollider>();
-            meshCollider.sharedMesh = meshFilter.sharedMesh;
-        }
-
-        // Recursively process child objects
         foreach (Transform child in parent)
         {
-            SetTagAndAddMeshCollidersRecursivelyToChildren(child);
+            // Remove or disable the NavMeshObstacle component
+            NavMeshObstacle navMeshObstacle = child.GetComponent<NavMeshObstacle>();
+            if (navMeshObstacle != null)
+            {
+                // You can either remove the NavMeshObstacle component
+                DestroyImmediate(navMeshObstacle);
+                // OR disable it if you might want to enable it later
+                // navMeshObstacle.enabled = false;
+            }
+
+            RemoveNavMeshObstacleRecursive(child);
         }
     }
 }
