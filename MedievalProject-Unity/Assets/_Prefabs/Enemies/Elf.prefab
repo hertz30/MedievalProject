@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658c7af7a583deb4d99698b08ac6d5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   health: 1
   myPrefab: {fileID: 190564, guid: 76f78bb9eb57f5a4b910a2b0ed106958, type: 3}
   attackRate: 2

@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour
     private bool isDead;
     private bool isAttacking;
     //distance for enemy to start searching for player
-    public float lookRadius = 10f;
+    public float lookRadius = 20f;
     public float health = 1;
     NavMeshAgent agent;
     private Animator anim;
@@ -38,6 +38,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateHealthbar();
         if (health <= 0)
         {
             isDead = true;
@@ -64,7 +65,6 @@ public class EnemyScript : MonoBehaviour
                 agent.SetDestination(transform.position);
             }
             anim.SetFloat("Speed_f", speed);
-            UpdateHealthbar();
             if (isAttacking && Time.time > nextAttack)
             {
                 nextAttack = Time.time + attackRate;

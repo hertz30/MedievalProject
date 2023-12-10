@@ -15,7 +15,7 @@ using UnityEngine;
     void OnTriggerEnter (Collider coll){
         GameObject collidedWith = coll.gameObject;
         if(collidedWith.CompareTag("Enemy")){
-            collidedWith.GetComponent<EnemyScript>().health-=.5f;
+            collidedWith.GetComponent<EnemyScript>().health-=.35f;
             Debug.Log("health:"+collidedWith.GetComponent<EnemyScript>().health);
         }
     }

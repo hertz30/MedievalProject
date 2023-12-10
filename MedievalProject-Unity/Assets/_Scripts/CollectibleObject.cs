@@ -7,7 +7,20 @@ public class CollectibleObject : MonoBehaviour
     // Define a unique identifier for each collectible type
     public string collectibleType = "Default";
 
-    public float rotationSpeed = 30f;
+    public static float rotationSpeed = 30f;
+    public static float bobbingHeight = 0.4f;
+    public static float bobbingSpeed = .5f;
+
+    private float startY;
+
+    void Start()
+    {
+        // Store the initial Y position for reference
+        startY = transform.position.y;
+
+        // Start the bobbing motion coroutine
+        StartCoroutine(BobbingMotion());
+    }
 
     void Update()
     {
@@ -19,6 +32,20 @@ public class CollectibleObject : MonoBehaviour
         {
             // Destroy the collectible object
             Destroy(gameObject);
+        }
+    }
+
+    IEnumerator BobbingMotion()
+    {
+        while (true)
+        {
+            // Calculate vertical offset using a sine function for oscillation
+            float yOffset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingHeight;
+
+            // Update the position of the collectible object
+            transform.position = new Vector3(transform.position.x, startY + yOffset, transform.position.z);
+
+            yield return null;
         }
     }
 

@@ -30,8 +30,28 @@ public class HealthItemGenerator : MonoBehaviour
 
             // Instantiate the single health item prefab as a child of the calling object
             GameObject newHealthItem = Instantiate(healthItemPrefab, randomPosition, Quaternion.identity, transform);
-            newHealthItem.transform.localScale = new Vector3(Random.Range(1f, 3f), Random.Range(1f, 3f), Random.Range(1f, 3f));
+
+            // Rotate the health item around its local up axis
             newHealthItem.transform.Rotate(Vector3.up, Random.Range(0f, 360f));
+
+            // Add a simple vertical bobbing motion
+            StartCoroutine(BobbingMotion(newHealthItem.transform, 0.3f, 1.0f));
+        }
+    }
+
+    IEnumerator BobbingMotion(Transform itemTransform, float bobbingHeight, float bobbingSpeed)
+    {
+        float startY = itemTransform.position.y;
+
+        while (true)
+        {
+            // Calculate vertical offset using a sine function for oscillation
+            float yOffset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingHeight;
+
+            // Update the position of the health item
+            itemTransform.position = new Vector3(itemTransform.position.x, startY + yOffset, itemTransform.position.z);
+
+            yield return null;
         }
     }
 
