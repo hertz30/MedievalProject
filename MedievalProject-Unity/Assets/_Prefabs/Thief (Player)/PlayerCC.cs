@@ -66,6 +66,7 @@ public class PlayerCC : MonoBehaviour
         {
             // Load the title screen scene
             SceneManager.LoadScene("TitleScreen");
+            Cursor.lockState = CursorLockMode.None;
         }
         healthBar.value = health;
         if (!isDead)
