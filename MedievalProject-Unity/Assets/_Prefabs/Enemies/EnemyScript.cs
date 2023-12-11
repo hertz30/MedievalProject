@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using FMODUnity;
 public class EnemyScript : MonoBehaviour
 {
     private float speed;
@@ -24,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     private bool nearPlayer;
     private static GameObject player;
     PlayerCC playerCC;
+    private StudioEventEmitter fmodEmitter;
     // Start is called before the first frame update
     void Start(){
         target = PlayerManager.instance.player.transform;
@@ -36,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         healthBar = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Slider>();
         player = GameObject.FindWithTag("Player");
         playerCC = player.GetComponent<PlayerCC>();
+        fmodEmitter = GetComponent<StudioEventEmitter>();
     }
 
     // Update is called once per frame
@@ -46,6 +49,7 @@ public class EnemyScript : MonoBehaviour
         {
             isDead = true;
             anim.SetBool("Death_b", isDead);
+            fmodEmitter.SetParameter("volume", 0.0f);
             Invoke("Dead", 1.4f);
         }
         if (!isDead)

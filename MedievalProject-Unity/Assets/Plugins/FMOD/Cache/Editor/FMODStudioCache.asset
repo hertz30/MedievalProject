@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638378354448263243
+  lastModified: 638378366090108491
   FileSizes:
   - Name: Desktop
     Value: 1124
@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638378354448243242
+  lastModified: 638378366090093822
   FileSizes:
   - Name: Desktop
     Value: 3988864
@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: -97149641316529842}
   StringsBanks:
   - {fileID: -5984945622166711403}
-  cacheTime: 638378354448263243
+  cacheTime: 638378366090108491
   cacheVersion: 131608
 --- !u!114 &2946911071696474900
 MonoBehaviour:
