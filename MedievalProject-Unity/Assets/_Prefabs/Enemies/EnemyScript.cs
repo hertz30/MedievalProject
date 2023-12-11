@@ -26,6 +26,7 @@ public class EnemyScript : MonoBehaviour
     private static GameObject player;
     PlayerCC playerCC;
     private StudioEventEmitter fmodEmitter;
+    private float maxHealth;
     // Start is called before the first frame update
     void Start(){
         target = PlayerManager.instance.player.transform;
@@ -39,6 +40,7 @@ public class EnemyScript : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerCC = player.GetComponent<PlayerCC>();
         fmodEmitter = GetComponent<StudioEventEmitter>();
+        maxHealth=health;
     }
 
     // Update is called once per frame
@@ -96,7 +98,7 @@ public class EnemyScript : MonoBehaviour
         }
     }
     public void UpdateHealthbar(){
-        healthBar.value = health;
+        healthBar.value = health/maxHealth;
     }
     void Dead(){
         anim.speed=0;
