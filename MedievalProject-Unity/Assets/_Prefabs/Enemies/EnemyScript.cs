@@ -47,14 +47,17 @@ public class EnemyScript : MonoBehaviour
         UpdateHealthbar();
         if (health <= 0)
         {
+            if(isDead!=true){
+                if(nearPlayer){
+                    nearPlayer=false;
+                    playerCC.enemiesNear-=1;
+                }
             isDead = true;
             anim.SetBool("Death_b", isDead);
             fmodEmitter.EventInstance.setVolume(0.0f);
             Invoke("Dead", 1.4f);
-            if(nearPlayer){
-                    nearPlayer=false;
-                    playerCC.enemiesNear-=1;
-                }
+            PlayerPrefs.SetInt("EnemiesKilled", PlayerPrefs.GetInt("EnemiesKilled", 0)+1);
+            }
         }
         if (!isDead)
         {
