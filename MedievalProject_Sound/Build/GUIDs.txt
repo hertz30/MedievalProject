@@ -1,0 +1,13 @@
+{a1034cb8-6e23-4310-b41e-f2f45c737885} bank:/Master
+{391e6c6c-1f58-0f52-3257-780aad807e1d} bank:/Master.strings
+{7b656b40-c1c0-4a80-8f03-907ea87c8755} bus:/
+{2684a2fe-9be1-489c-a936-c80f3db7ba74} bus:/Reverb
+{0594ec41-7c41-446a-9508-90a803112265} event:/ElfSounds
+{b69daae4-62a0-466f-9221-dfaed8c48422} event:/GoblinSounds
+{910c2988-7457-4f37-8285-62340ed3dc47} event:/Hit
+{471adb12-65e4-4b6c-8d4d-2ad474e4fd2f} event:/HumanSounds
+{7110a517-6007-475e-af14-9e71f573fd7e} event:/Music
+{bc8c71db-3107-414a-860a-8178dc19d6ca} event:/Running
+{5d45abbc-1103-4639-8439-d85037b08121} event:/SkeletonSounds
+{13338681-22c2-493c-a612-823f08c41e6f} parameter:/Distance
+{7e85360c-d499-4940-b975-be222fcae200} parameter:/PlayDrums

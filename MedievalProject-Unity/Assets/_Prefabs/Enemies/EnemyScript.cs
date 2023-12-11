@@ -21,7 +21,9 @@ public class EnemyScript : MonoBehaviour
     public float attackRate=2f;
     public float damage = 0.1f;
     private float nextAttack;
+    private bool nearPlayer;
     private static GameObject player;
+    PlayerCC playerCC;
     // Start is called before the first frame update
     void Start(){
         target = PlayerManager.instance.player.transform;
@@ -33,6 +35,7 @@ public class EnemyScript : MonoBehaviour
         anim.SetInteger("DeathType_int", UnityEngine.Random.Range(1,3));
         healthBar = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Slider>();
         player = GameObject.FindWithTag("Player");
+        playerCC = player.GetComponent<PlayerCC>();
     }
 
     // Update is called once per frame
@@ -57,12 +60,20 @@ public class EnemyScript : MonoBehaviour
                     //face the target
                     FaceTarget();
                 }
+                if(!nearPlayer){
+                    playerCC.enemiesNear+=1;
+                    nearPlayer=true;
+                }
             }
             else
             {
                 anim.SetInteger("Animation_int", UnityEngine.Random.Range(1, 9));
                 speed = 0;
                 agent.SetDestination(transform.position);
+                if(nearPlayer){
+                    nearPlayer=false;
+                    playerCC.enemiesNear-=1;
+                }
             }
             anim.SetFloat("Speed_f", speed);
             if (isAttacking && Time.time > nextAttack)

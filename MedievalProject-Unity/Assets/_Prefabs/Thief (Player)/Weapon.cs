@@ -5,6 +5,7 @@ using UnityEngine;
     public class ItemAttachment : MonoBehaviour
 {
     public Transform handBone; // Reference to the character's hand bone
+    public FMODUnity.EventReference MyEvent;
     void Awake()
     {
         // Set the hand bone as the new parent
@@ -17,6 +18,7 @@ using UnityEngine;
         if(collidedWith.CompareTag("Enemy")){
             collidedWith.GetComponent<EnemyScript>().health-=.35f;
             Debug.Log("health:"+collidedWith.GetComponent<EnemyScript>().health);
+            FMODUnity.RuntimeManager.PlayOneShot(MyEvent, transform.position);
         }
     }
 }

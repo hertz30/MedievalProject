@@ -1328,6 +1328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8543322902270139789}
+  - component: {fileID: 6659788405494963478}
   m_Layer: 0
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
@@ -1351,6 +1352,37 @@ Transform:
   - {fileID: 3215950473721139398}
   m_Father: {fileID: 5143339573042770660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6659788405494963478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564558418946974816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1131646501
+      Data2: 1095381255
+      Data3: 2021722758
+      Data4: -891938340
+    Path: event:/Running
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1812370403883166516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2652,7 @@ GameObject:
   - component: {fileID: 1083720404159931665}
   - component: {fileID: 7788394661489078406}
   - component: {fileID: 5683906664573603103}
-  - component: {fileID: 2911017810217771665}
+  - component: {fileID: 6961836053505030040}
   m_Layer: 0
   m_Name: ThiefCC
   m_TagString: Player
@@ -2743,19 +2775,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff471c38693340efbfed2e352834496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Foot: {fileID: 1564558418946974816}
+  playerCamera: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
   moveSpeed: 10
   attackRate: 0.6
   rotationSpeed: 100
   strafeSpeed: 5
   jumpHeight: 5
   gravity: 9.81
+  enemiesNear: 0
   health: 1
   weapon: {fileID: 6086657772835769891}
-  respawnLocation:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
+  isDead: 0
   sensOffset: 0.2
---- !u!114 &2911017810217771665
+--- !u!114 &6961836053505030040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2764,28 +2799,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3580897836811737717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1896916247
-      Data2: 1197367303
-      Data3: 1906185391
-      Data4: 2130539509
-    Path: event:/Music
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  attenuationObject: {fileID: 0}
 --- !u!1 &4000175158443504034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,6 +5561,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handBone: {fileID: 321129863458432190}
+  MyEvent:
+    Guid:
+      Data1: -1861473912
+      Data2: 1329034327
+      Data3: 878871938
+      Data4: 1205654286
+    Path: event:/Hit
 --- !u!136 &5040000488794916614
 CapsuleCollider:
   m_ObjectHideFlags: 0

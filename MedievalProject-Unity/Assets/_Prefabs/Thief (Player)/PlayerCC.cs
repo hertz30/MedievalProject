@@ -5,11 +5,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using FMOD.Studio;
+using FMODUnity;
 using static PlayerCC;
 using UnityEngine.SceneManagement;
 
 public class PlayerCC : MonoBehaviour
 {
+    public GameObject Foot;
+    private StudioEventEmitter FootstepEmitter;
+    public GameObject playerCamera;
+    private StudioEventEmitter musicEmitter;
     [SerializeField] private Vector3 initialPosition;
     [SerializeField] private Quaternion initialRotation;
 
@@ -21,6 +26,7 @@ public class PlayerCC : MonoBehaviour
     [SerializeField] private float jumpHeight;
     [SerializeField] private float gravity;
     
+    public int enemiesNear;
     public float health = 1;
 
     private bool onGround = false;
@@ -34,6 +40,7 @@ public class PlayerCC : MonoBehaviour
     private Collider weaponCollider;
     public bool isDead;
     Slider healthBar;
+    EventInstance eventInstance;
 
     [Range(0.1f, 2.0f)] // slider range
     public float sensOffset = 1f;
@@ -48,6 +55,14 @@ public class PlayerCC : MonoBehaviour
         weaponCollider = weapon.GetComponent<Collider>();
         healthBar = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Slider>();
         sensOffset=PlayerPrefs.GetFloat("MouseSens",0.5f)*2;
+        FootstepEmitter = Foot.GetComponent<StudioEventEmitter>();
+         if (FootstepEmitter == null)
+            {
+                Debug.LogError("FMOD StudioEventEmitter component not found on Foot.");
+            }
+        musicEmitter = playerCamera.GetComponent<FMODUnity.StudioEventEmitter>();
+        if (musicEmitter == null)
+        {Debug.LogError("FMOD StudioEventEmitter component not found on Camera.");}
     }
 
     // Update is called once per frame
@@ -69,6 +84,11 @@ public class PlayerCC : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
         healthBar.value = health;
+        if(enemiesNear>0){
+            musicEmitter.EventInstance.setParameterByNameWithLabel("EnemiesNear", "True");
+        }else{
+            musicEmitter.EventInstance.setParameterByNameWithLabel("EnemiesNear", "False");
+        }
         if (!isDead)
         {
             // CHARACTER MOVEMENT:
@@ -107,23 +127,28 @@ public class PlayerCC : MonoBehaviour
                 if (Input.GetKey(KeyCode.S))
                 {
                     animate.SetInteger("Speed", -1);
+                    FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
                 if (Input.GetKey(KeyCode.W))
                 {
                     animate.SetInteger("Speed", 6);
+                    FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
                 if (Input.GetKey(KeyCode.A))
                 {
                     animate.SetInteger("Speed", 3);
+                    FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
                     animate.SetInteger("Speed", 3);
+                    FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
             }
             else
             {
                 animate.SetInteger("Speed", 0);
+                FootstepEmitter.EventInstance.setVolume(0.0f);
             }
 
             animate.SetBool("inAir", !onGround);

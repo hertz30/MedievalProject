@@ -21,8 +21,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -97149641316529842}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638373080766611510
+  lastModified: 638378354448263243
   FileSizes:
   - Name: Desktop
-    Value: 936
+    Value: 1124
   Exists: 1
 --- !u!114 &-3024323421747183843
 MonoBehaviour:
@@ -68,12 +68,39 @@ MonoBehaviour:
   Banks:
   - {fileID: -97149641316529842}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 31320
+--- !u!114 &-2971315064614531104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Running
+  m_EditorClassIdentifier: 
+  Path: event:/Running
+  Guid:
+    Data1: -1131646501
+    Data2: 1095381255
+    Data3: 2021722758
+    Data4: -891938340
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1992
 --- !u!114 &-428175270639810705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,8 +122,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -97149641316529842}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -116,10 +143,10 @@ MonoBehaviour:
   Path: ../MedievalProject_Sound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638373080766609333
+  lastModified: 638378354448243242
   FileSizes:
   - Name: Desktop
-    Value: 4342592
+    Value: 3988864
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -142,13 +169,68 @@ MonoBehaviour:
   - {fileID: -3024323421747183843}
   - {fileID: 7382391326019371908}
   - {fileID: -6986081443741050813}
+  - {fileID: 3681650746699235687}
+  - {fileID: -2971315064614531104}
   EditorParameters: []
   MasterBanks:
   - {fileID: -97149641316529842}
   StringsBanks:
   - {fileID: -5984945622166711403}
-  cacheTime: 638373080766611510
+  cacheTime: 638378354448263243
   cacheVersion: 131608
+--- !u!114 &2946911071696474900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/EnemiesNear
+  m_EditorClassIdentifier: 
+  Name: EnemiesNear
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3555895710
+    data2: 497160410
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
+--- !u!114 &3681650746699235687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Hit
+  Guid:
+    Data1: -1861473912
+    Data2: 1329034327
+    Data3: 878871938
+    Data4: 1205654286
+  Banks:
+  - {fileID: -97149641316529842}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1515
 --- !u!114 &4037201723282630612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,10 +254,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2946911071696474900}
   MinDistance: 1
   MaxDistance: 20
-  Length: 14769
+  Length: 17068
 --- !u!114 &7382391326019371908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +280,8 @@ MonoBehaviour:
   Banks:
   - {fileID: -97149641316529842}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
