@@ -122,16 +122,11 @@ public class PlayerCC : MonoBehaviour
             characterController.Move(velocity * Time.deltaTime);
 
             // Configure player's animations for movement. ~TW
-            if (goMove + goTurn != 0) // && onGround
+            if (goMove!=0 || goTurn!=0) // && onGround
             {
                 if (Input.GetKey(KeyCode.S))
                 {
                     animate.SetInteger("Speed", -1);
-                    FootstepEmitter.EventInstance.setVolume(1.0f);
-                }
-                if (Input.GetKey(KeyCode.W))
-                {
-                    animate.SetInteger("Speed", 6);
                     FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
                 if (Input.GetKey(KeyCode.A))
@@ -142,6 +137,11 @@ public class PlayerCC : MonoBehaviour
                 if (Input.GetKey(KeyCode.D))
                 {
                     animate.SetInteger("Speed", 3);
+                    FootstepEmitter.EventInstance.setVolume(1.0f);
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    animate.SetInteger("Speed", 6);
                     FootstepEmitter.EventInstance.setVolume(1.0f);
                 }
             }

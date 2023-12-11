@@ -49,8 +49,12 @@ public class EnemyScript : MonoBehaviour
         {
             isDead = true;
             anim.SetBool("Death_b", isDead);
-            fmodEmitter.SetParameter("volume", 0.0f);
+            fmodEmitter.EventInstance.setVolume(0.0f);
             Invoke("Dead", 1.4f);
+            if(nearPlayer){
+                    nearPlayer=false;
+                    playerCC.enemiesNear-=1;
+                }
         }
         if (!isDead)
         {
