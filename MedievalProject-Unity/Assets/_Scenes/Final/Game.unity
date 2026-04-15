@@ -27703,6 +27703,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 175776, guid: b34d414eb9145d64284f51c7d1d4dff7, type: 3}
   m_PrefabInstance: {fileID: 586287974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &272465924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7066215208258408727, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
+  m_PrefabInstance: {fileID: 307688597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &272624561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31895,6 +31900,10 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5683906664573603103, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
+      propertyPath: DeadUI
+      value: 
+      objectReference: {fileID: 272465924}
+    - target: {fileID: 5683906664573603103, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 75441851}
@@ -31937,14 +31946,6 @@ PrefabInstance:
     - target: {fileID: 7614035755540697884, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
       propertyPath: m_TagString
       value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788394661489078406, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
-      propertyPath: m_SlopeLimit
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788394661489078406, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
-      propertyPath: m_StepOffset
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7843896210069667342, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
       propertyPath: m_TagString

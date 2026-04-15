@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCC : MonoBehaviour
 {
+    public GameObject DeadUI;
     public GameObject Foot;
     private StudioEventEmitter FootstepEmitter;
     public GameObject playerCamera;
@@ -63,12 +64,14 @@ public class PlayerCC : MonoBehaviour
         musicEmitter = playerCamera.GetComponent<FMODUnity.StudioEventEmitter>();
         if (musicEmitter == null)
         {Debug.LogError("FMOD StudioEventEmitter component not found on Camera.");}
+        
+        FMODUnity.RuntimeManager.GetBus("bus:/").setVolume(PlayerPrefs.GetFloat("Volume", 0.5f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        FMODUnity.RuntimeManager.GetBus("bus:/").setVolume(PlayerPrefs.GetFloat("Volume", 0.5f));
+        DisplayDeadUI(isDead);
         if (health<=0){
             isDead=true;
             animate.SetBool("Death", isDead);
@@ -212,5 +215,9 @@ public class PlayerCC : MonoBehaviour
                 velocity.y = 0f; // Reset vertical velocity when on the ground
             }
         }
+    }
+    void DisplayDeadUI(bool _isDead)
+    {
+        DeadUI.SetActive(isDead);
     }
 }
