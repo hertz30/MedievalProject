@@ -43,7 +43,7 @@ public class HealthItemGenerator : MonoBehaviour
     {
         float startY = itemTransform.position.y;
 
-        while (true)
+        while (itemTransform!=null)
         {
             // Calculate vertical offset using a sine function for oscillation
             float yOffset = Mathf.Sin(Time.time * bobbingSpeed) * bobbingHeight;
