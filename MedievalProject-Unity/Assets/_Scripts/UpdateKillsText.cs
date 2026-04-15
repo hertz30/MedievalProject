@@ -23,4 +23,8 @@ public class UpdateKillsText : MonoBehaviour
             }
         }
     }
+    void OnDestroy()
+    {
+        PlayerPrefs.SetInt("EnemiesKilled", 0);
+    }
 }
