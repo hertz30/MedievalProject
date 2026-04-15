@@ -205,12 +205,12 @@ public class PlayerCC : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Ground"))
         {
-            onGround = true;
-            velocity.y = 0f; // Reset vertical velocity when on the ground
-        }
-        else
-        {
-            onGround = false;
+            if (Vector3.Angle(Vector3.up, hit.normal) <= 60f) 
+            {
+                // We found valid ground! 
+                onGround = true;
+                velocity.y = 0f; // Reset vertical velocity when on the ground
+            }
         }
     }
 }

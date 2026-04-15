@@ -31938,6 +31938,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 7788394661489078406, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788394661489078406, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
+      propertyPath: m_StepOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7843896210069667342, guid: c6d786712b19045dc816a8ab21cf44a7, type: 3}
       propertyPath: m_TagString
       value: Ground
