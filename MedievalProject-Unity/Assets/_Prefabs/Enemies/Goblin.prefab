@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3229348591472452811}
   - component: {fileID: 6907952039136215960}
   - component: {fileID: 3550683928268423975}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520038607780080573}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2549232592466037019}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 639344310918368776}
   - component: {fileID: 1313783599813672989}
   - component: {fileID: 6471154219331205573}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 8330990184657305425}
   - component: {fileID: 1414709022018057505}
   - component: {fileID: 5571035335339879652}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyGeneric
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 8691012949787919755}
   - component: {fileID: 1748347178495752882}
   - component: {fileID: 8915787191856070231}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6855382627926635421}
   - component: {fileID: 5549568468542375876}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
